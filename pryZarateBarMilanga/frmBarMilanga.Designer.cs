@@ -30,21 +30,31 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBarMilanga));
             dgvVentas = new DataGridView();
+            colMozos = new DataGridViewTextBoxColumn();
             colComidas = new DataGridViewTextBoxColumn();
             colBebidasSinAlcohol = new DataGridViewTextBoxColumn();
             colBebidasConAlcohol = new DataGridViewTextBoxColumn();
             colPostres = new DataGridViewTextBoxColumn();
+            btnValidarDatos = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvVentas).BeginInit();
             SuspendLayout();
             // 
             // dgvVentas
             // 
+            dgvVentas.AllowUserToAddRows = false;
+            dgvVentas.BackgroundColor = Color.LightSlateGray;
             dgvVentas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvVentas.Columns.AddRange(new DataGridViewColumn[] { colComidas, colBebidasSinAlcohol, colBebidasConAlcohol, colPostres });
-            dgvVentas.Location = new Point(32, 21);
+            dgvVentas.Columns.AddRange(new DataGridViewColumn[] { colMozos, colComidas, colBebidasSinAlcohol, colBebidasConAlcohol, colPostres });
+            dgvVentas.Location = new Point(68, 44);
             dgvVentas.Name = "dgvVentas";
-            dgvVentas.Size = new Size(525, 226);
+            dgvVentas.RowHeadersVisible = false;
+            dgvVentas.Size = new Size(476, 182);
             dgvVentas.TabIndex = 0;
+            // 
+            // colMozos
+            // 
+            colMozos.HeaderText = "Mozos";
+            colMozos.Name = "colMozos";
             // 
             // colComidas
             // 
@@ -66,11 +76,26 @@
             colPostres.HeaderText = "Postres";
             colPostres.Name = "colPostres";
             // 
+            // btnValidarDatos
+            // 
+            btnValidarDatos.Anchor = AnchorStyles.None;
+            btnValidarDatos.BackColor = Color.SkyBlue;
+            btnValidarDatos.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnValidarDatos.Location = new Point(432, 246);
+            btnValidarDatos.Name = "btnValidarDatos";
+            btnValidarDatos.Size = new Size(112, 46);
+            btnValidarDatos.TabIndex = 1;
+            btnValidarDatos.Text = "Validar datos";
+            btnValidarDatos.UseVisualStyleBackColor = false;
+            btnValidarDatos.Click += btnValidarDatos_Click;
+            // 
             // frmBarMilanga
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.SlateGray;
             ClientSize = new Size(613, 345);
+            Controls.Add(btnValidarDatos);
             Controls.Add(dgvVentas);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -85,6 +110,8 @@
         #endregion
 
         private DataGridView dgvVentas;
+        private Button btnValidarDatos;
+        private DataGridViewTextBoxColumn colMozos;
         private DataGridViewTextBoxColumn colComidas;
         private DataGridViewTextBoxColumn colBebidasSinAlcohol;
         private DataGridViewTextBoxColumn colBebidasConAlcohol;

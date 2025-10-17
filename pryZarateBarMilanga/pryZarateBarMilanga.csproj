@@ -6,6 +6,11 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>reptile_wildlife_kingdom_animal_life_wild_camouflage_chameleon_icon_266152.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="reptile_wildlife_kingdom_animal_life_wild_camouflage_chameleon_icon_266152.ico" />
+  </ItemGroup>
 
 </Project>
