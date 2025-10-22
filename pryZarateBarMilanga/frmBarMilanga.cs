@@ -36,24 +36,29 @@ namespace pryZarateBarMilanga
         {
             for (int indiceFilas = 0; indiceFilas < dgvVentas.Rows.Count; indiceFilas++)
             {
-                for (int indiceColumnas = 0; indiceColumnas < 5; indiceColumnas++)
+                for (int indiceColumnas = 1; indiceColumnas < 5; indiceColumnas++)
                 {
                     if (dgvVentas.Rows[indiceFilas].Cells[indiceColumnas].Value != null)
                     {
-                        float contenidoCelda =
-                        float.Parse (dgvVentas.Rows[indiceFilas].Cells[indiceColumnas].Value.ToString());
-                        if (float.IsRealNumber(contenidoCelda))
+                        object valorCelda= dgvVentas.Rows[indiceFilas].Cells[indiceColumnas].Value;
+                        if (float.TryParse (Convert.ToString (valorCelda), out float resultado))
                         {
-                            dgvVentas.Rows[indiceFilas].Cells[indiceColumnas].Value = "si";
+                               dgvVentas.Rows[indiceFilas].Cells[indiceColumnas].Value = "si";
                         }
                         else
                         {
                             dgvVentas.Rows[indiceFilas].Cells[indiceColumnas].Value = "no";
 
                         }
+                        
+                    }
+                    else
+                    {
+                        dgvVentas.Rows[indiceFilas].Cells[indiceColumnas].Value = "no";
+
                     }
                 }
-            }
         }
+    }
     }
 }
