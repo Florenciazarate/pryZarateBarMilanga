@@ -16,7 +16,7 @@ namespace pryZarateBarMilanga
         {
             InitializeComponent();
         }
-        float[,] matVentas = new float[5, 4];
+        float[,] matVentas = new float [5, 4];
         private void frmBarMilanga_Load(object sender, EventArgs e)
         {
             dgvVentas.Rows.Add("Julio");
@@ -41,7 +41,7 @@ namespace pryZarateBarMilanga
                     if (dgvVentas.Rows[indiceFilas].Cells[indiceColumnas].Value != null)
                     {
                         float contenidoCelda =
-                        float.Parse(dgvVentas.Rows[indiceFilas].Cells[indiceColumnas].Value.ToString());
+                        float.Parse (dgvVentas.Rows[indiceFilas].Cells[indiceColumnas].Value.ToString());
                         if (float.IsRealNumber(contenidoCelda))
                         {
                             dgvVentas.Rows[indiceFilas].Cells[indiceColumnas].Value = "si";

@@ -45,10 +45,10 @@
             dgvVentas.BackgroundColor = Color.LightSlateGray;
             dgvVentas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvVentas.Columns.AddRange(new DataGridViewColumn[] { colMozos, colComidas, colBebidasSinAlcohol, colBebidasConAlcohol, colPostres });
-            dgvVentas.Location = new Point(68, 44);
+            dgvVentas.Location = new Point(33, 49);
             dgvVentas.Name = "dgvVentas";
             dgvVentas.RowHeadersVisible = false;
-            dgvVentas.Size = new Size(476, 182);
+            dgvVentas.Size = new Size(511, 180);
             dgvVentas.TabIndex = 0;
             // 
             // colMozos
@@ -80,10 +80,10 @@
             // 
             btnValidarDatos.Anchor = AnchorStyles.None;
             btnValidarDatos.BackColor = Color.SkyBlue;
-            btnValidarDatos.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnValidarDatos.Location = new Point(432, 246);
+            btnValidarDatos.Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnValidarDatos.Location = new Point(441, 247);
             btnValidarDatos.Name = "btnValidarDatos";
-            btnValidarDatos.Size = new Size(112, 46);
+            btnValidarDatos.Size = new Size(103, 39);
             btnValidarDatos.TabIndex = 1;
             btnValidarDatos.Text = "Validar datos";
             btnValidarDatos.UseVisualStyleBackColor = false;
