@@ -53,6 +53,7 @@
             dgvVentas.Columns.AddRange(new DataGridViewColumn[] { colMozos, colComidas, colBebidasSinAlcohol, colBebidasConAlcohol, colPostres });
             dgvVentas.Location = new Point(33, 42);
             dgvVentas.Name = "dgvVentas";
+            dgvVentas.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dgvVentas.RowHeadersVisible = false;
             dgvVentas.Size = new Size(518, 204);
             dgvVentas.TabIndex = 0;
@@ -88,7 +89,7 @@
             btnValidarDatos.BackColor = Color.SkyBlue;
             btnValidarDatos.FlatStyle = FlatStyle.Popup;
             btnValidarDatos.Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnValidarDatos.Location = new Point(441, 252);
+            btnValidarDatos.Location = new Point(448, 262);
             btnValidarDatos.Name = "btnValidarDatos";
             btnValidarDatos.Size = new Size(103, 39);
             btnValidarDatos.TabIndex = 1;
@@ -120,13 +121,15 @@
             btnTotales.TabIndex = 3;
             btnTotales.Text = "Totales";
             btnTotales.UseVisualStyleBackColor = false;
+            btnTotales.Click += btnTotales_Click;
             // 
             // btnCerrar
             // 
             btnCerrar.Anchor = AnchorStyles.None;
             btnCerrar.BackColor = Color.SkyBlue;
+            btnCerrar.FlatStyle = FlatStyle.Flat;
             btnCerrar.Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCerrar.Location = new Point(33, 398);
+            btnCerrar.Location = new Point(448, 556);
             btnCerrar.Name = "btnCerrar";
             btnCerrar.Size = new Size(103, 39);
             btnCerrar.TabIndex = 4;
@@ -138,28 +141,26 @@
             // 
             lblMozoDelDia.AutoSize = true;
             lblMozoDelDia.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMozoDelDia.Location = new Point(154, 316);
+            lblMozoDelDia.Location = new Point(142, 318);
             lblMozoDelDia.Name = "lblMozoDelDia";
-            lblMozoDelDia.Size = new Size(52, 21);
+            lblMozoDelDia.Size = new Size(0, 21);
             lblMozoDelDia.TabIndex = 5;
-            lblMozoDelDia.Text = "label1";
             // 
             // lblTotales
             // 
             lblTotales.AutoSize = true;
             lblTotales.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTotales.Location = new Point(154, 361);
+            lblTotales.Location = new Point(143, 362);
             lblTotales.Name = "lblTotales";
-            lblTotales.Size = new Size(52, 21);
+            lblTotales.Size = new Size(0, 21);
             lblTotales.TabIndex = 6;
-            lblTotales.Text = "label2";
             // 
             // frmBarMilanga
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SlateGray;
-            ClientSize = new Size(613, 496);
+            ClientSize = new Size(613, 616);
             Controls.Add(lblTotales);
             Controls.Add(lblMozoDelDia);
             Controls.Add(btnCerrar);

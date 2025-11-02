@@ -96,5 +96,27 @@ namespace pryZarateBarMilanga
             }
             lblMozoDelDia.Text = $"Mozo del día: {nombresMozos[indiceMozo]} con ventas de ${mayorVenta}";
         }
+
+        private void btnTotales_Click(object sender, EventArgs e)
+        {
+            float[] totalesCategorias = new float[4]; // Comidas, Bebidas sin alcohol, Bebidas con alcohol, Postres
+            float totalGeneral = 0;
+
+            for (int fila = 0; fila < matVentas.GetLength(0); fila++)
+            {
+                for (int col = 0; col < matVentas.GetLength(1); col++)
+                {
+                    totalesCategorias[col] += matVentas[fila, col];
+                    totalGeneral += matVentas[fila, col];
+                }
+            }
+          lblTotales.Text = 
+          $"Comidas: ${totalesCategorias[0]}\n" +
+          $"Bebidas sin alcohol: ${totalesCategorias[1]}\n" +
+          $"Bebidas con alcohol: ${totalesCategorias[2]}\n" +
+          $"Postres: ${totalesCategorias[3]}\n" +
+          $"Total general: ${totalGeneral}";
+        }
+
     }
 }
