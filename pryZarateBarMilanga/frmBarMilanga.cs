@@ -34,31 +34,39 @@ namespace pryZarateBarMilanga
 
         private void btnValidarDatos_Click(object sender, EventArgs e)
         {
-            for (int indiceFilas = 0; indiceFilas < dgvVentas.Rows.Count; indiceFilas++)
-            {
-                for (int indiceColumnas = 1; indiceColumnas < 5; indiceColumnas++)
-                {
-                    if (dgvVentas.Rows[indiceFilas].Cells[indiceColumnas].Value != null)
-                    {
-                        object valorCelda= dgvVentas.Rows[indiceFilas].Cells[indiceColumnas].Value;
-                        if (float.TryParse (Convert.ToString (valorCelda), out float resultado))
-                        {
-                               dgvVentas.Rows[indiceFilas].Cells[indiceColumnas].Value = "si";
-                        }
-                        else
-                        {
-                            dgvVentas.Rows[indiceFilas].Cells[indiceColumnas].Value = "no";
+            bool datosValidos = true;
 
-                        }
-                        
+            for (int fila = 0; fila < dgvVentas.Rows.Count; fila++)
+            {
+                for (int col = 1; col < dgvVentas.Columns.Count; col++)
+                {
+                object valorCelda = dgvVentas.Rows[fila].Cells[col].Value;
+                    if (valorCelda == null || !float.TryParse(valorCelda.ToString(), out float resultado))
+                    {
+                        datosValidos = false;
+                        break;
                     }
                     else
                     {
-                        dgvVentas.Rows[indiceFilas].Cells[indiceColumnas].Value = "no";
-
+                        matVentas[fila, col - 1] = resultado;
                     }
                 }
+            }
+
+            if (!datosValidos)
+            {
+                MessageBox.Show("Rellene TODOS los campos solo con números. Revise los campos.",
+                                "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnMozoDelDia.Enabled = false;
+                btnTotales.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Datos validados correctamente.",
+                                "Validación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnMozoDelDia.Enabled = true;
+                btnTotales.Enabled = true;
+            }
         }
-    }
     }
 }

@@ -36,6 +36,11 @@
             colBebidasConAlcohol = new DataGridViewTextBoxColumn();
             colPostres = new DataGridViewTextBoxColumn();
             btnValidarDatos = new Button();
+            btnMozoDelDia = new Button();
+            btnTotales = new Button();
+            btnCerrar = new Button();
+            lblMozoDelDia = new Label();
+            lblTotales = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvVentas).BeginInit();
             SuspendLayout();
             // 
@@ -81,7 +86,7 @@
             btnValidarDatos.Anchor = AnchorStyles.None;
             btnValidarDatos.BackColor = Color.SkyBlue;
             btnValidarDatos.Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnValidarDatos.Location = new Point(441, 247);
+            btnValidarDatos.Location = new Point(441, 252);
             btnValidarDatos.Name = "btnValidarDatos";
             btnValidarDatos.Size = new Size(103, 39);
             btnValidarDatos.TabIndex = 1;
@@ -89,12 +94,73 @@
             btnValidarDatos.UseVisualStyleBackColor = false;
             btnValidarDatos.Click += btnValidarDatos_Click;
             // 
+            // btnMozoDelDia
+            // 
+            btnMozoDelDia.Anchor = AnchorStyles.None;
+            btnMozoDelDia.BackColor = Color.SkyBlue;
+            btnMozoDelDia.Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMozoDelDia.Location = new Point(33, 308);
+            btnMozoDelDia.Name = "btnMozoDelDia";
+            btnMozoDelDia.Size = new Size(103, 39);
+            btnMozoDelDia.TabIndex = 2;
+            btnMozoDelDia.Text = "Mozo del día";
+            btnMozoDelDia.UseVisualStyleBackColor = false;
+            // 
+            // btnTotales
+            // 
+            btnTotales.Anchor = AnchorStyles.None;
+            btnTotales.BackColor = Color.SkyBlue;
+            btnTotales.Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnTotales.Location = new Point(33, 353);
+            btnTotales.Name = "btnTotales";
+            btnTotales.Size = new Size(103, 39);
+            btnTotales.TabIndex = 3;
+            btnTotales.Text = "Totales";
+            btnTotales.UseVisualStyleBackColor = false;
+            // 
+            // btnCerrar
+            // 
+            btnCerrar.Anchor = AnchorStyles.None;
+            btnCerrar.BackColor = Color.SkyBlue;
+            btnCerrar.Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCerrar.Location = new Point(33, 398);
+            btnCerrar.Name = "btnCerrar";
+            btnCerrar.Size = new Size(103, 39);
+            btnCerrar.TabIndex = 4;
+            btnCerrar.Text = "Cerrar";
+            btnCerrar.UseVisualStyleBackColor = false;
+            // 
+            // lblMozoDelDia
+            // 
+            lblMozoDelDia.AutoSize = true;
+            lblMozoDelDia.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblMozoDelDia.Location = new Point(154, 316);
+            lblMozoDelDia.Name = "lblMozoDelDia";
+            lblMozoDelDia.Size = new Size(52, 21);
+            lblMozoDelDia.TabIndex = 5;
+            lblMozoDelDia.Text = "label1";
+            // 
+            // lblTotales
+            // 
+            lblTotales.AutoSize = true;
+            lblTotales.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTotales.Location = new Point(154, 361);
+            lblTotales.Name = "lblTotales";
+            lblTotales.Size = new Size(52, 21);
+            lblTotales.TabIndex = 6;
+            lblTotales.Text = "label2";
+            // 
             // frmBarMilanga
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SlateGray;
-            ClientSize = new Size(613, 345);
+            ClientSize = new Size(613, 496);
+            Controls.Add(lblTotales);
+            Controls.Add(lblMozoDelDia);
+            Controls.Add(btnCerrar);
+            Controls.Add(btnTotales);
+            Controls.Add(btnMozoDelDia);
             Controls.Add(btnValidarDatos);
             Controls.Add(dgvVentas);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
@@ -105,6 +171,7 @@
             Load += frmBarMilanga_Load;
             ((System.ComponentModel.ISupportInitialize)dgvVentas).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -116,5 +183,10 @@
         private DataGridViewTextBoxColumn colBebidasSinAlcohol;
         private DataGridViewTextBoxColumn colBebidasConAlcohol;
         private DataGridViewTextBoxColumn colPostres;
+        private Button btnMozoDelDia;
+        private Button btnTotales;
+        private Button btnCerrar;
+        private Label lblMozoDelDia;
+        private Label lblTotales;
     }
 }
