@@ -89,7 +89,7 @@
             btnValidarDatos.BackColor = Color.SkyBlue;
             btnValidarDatos.FlatStyle = FlatStyle.Popup;
             btnValidarDatos.Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnValidarDatos.Location = new Point(448, 262);
+            btnValidarDatos.Location = new Point(448, 252);
             btnValidarDatos.Name = "btnValidarDatos";
             btnValidarDatos.Size = new Size(103, 39);
             btnValidarDatos.TabIndex = 1;
@@ -102,7 +102,7 @@
             btnMozoDelDia.Anchor = AnchorStyles.None;
             btnMozoDelDia.BackColor = Color.SkyBlue;
             btnMozoDelDia.Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnMozoDelDia.Location = new Point(33, 308);
+            btnMozoDelDia.Location = new Point(34, 330);
             btnMozoDelDia.Name = "btnMozoDelDia";
             btnMozoDelDia.Size = new Size(103, 39);
             btnMozoDelDia.TabIndex = 2;
@@ -115,7 +115,7 @@
             btnTotales.Anchor = AnchorStyles.None;
             btnTotales.BackColor = Color.SkyBlue;
             btnTotales.Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnTotales.Location = new Point(33, 353);
+            btnTotales.Location = new Point(34, 375);
             btnTotales.Name = "btnTotales";
             btnTotales.Size = new Size(103, 39);
             btnTotales.TabIndex = 3;
@@ -129,9 +129,9 @@
             btnCerrar.BackColor = Color.SkyBlue;
             btnCerrar.FlatStyle = FlatStyle.Flat;
             btnCerrar.Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCerrar.Location = new Point(448, 556);
+            btnCerrar.Location = new Point(448, 455);
             btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new Size(103, 39);
+            btnCerrar.Size = new Size(103, 46);
             btnCerrar.TabIndex = 4;
             btnCerrar.Text = "Cerrar";
             btnCerrar.UseVisualStyleBackColor = false;
@@ -141,7 +141,7 @@
             // 
             lblMozoDelDia.AutoSize = true;
             lblMozoDelDia.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMozoDelDia.Location = new Point(142, 318);
+            lblMozoDelDia.Location = new Point(143, 387);
             lblMozoDelDia.Name = "lblMozoDelDia";
             lblMozoDelDia.Size = new Size(0, 21);
             lblMozoDelDia.TabIndex = 5;
@@ -160,7 +160,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SlateGray;
-            ClientSize = new Size(613, 616);
+            ClientSize = new Size(613, 523);
             Controls.Add(lblTotales);
             Controls.Add(lblMozoDelDia);
             Controls.Add(btnCerrar);
