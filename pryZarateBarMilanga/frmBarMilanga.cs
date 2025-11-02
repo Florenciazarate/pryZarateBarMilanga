@@ -15,8 +15,15 @@ namespace pryZarateBarMilanga
         public frmBarMilanga()
         {
             InitializeComponent();
+            btnMozoDelDia.Enabled = false;
+            btnTotales.Enabled = false;
+            dgvVentas.Columns[0].ReadOnly = true;
+            dgvVentas.Columns[0].DefaultCellStyle.BackColor = Color.LightGray;
+            dgvVentas.AllowUserToAddRows = false;
+
         }
-        float[,] matVentas = new float [5, 4];
+
+        float[,] matVentas = new float[5, 4];
         private void frmBarMilanga_Load(object sender, EventArgs e)
         {
             dgvVentas.Rows.Add("Julio");
@@ -40,7 +47,7 @@ namespace pryZarateBarMilanga
             {
                 for (int col = 1; col < dgvVentas.Columns.Count; col++)
                 {
-                object valorCelda = dgvVentas.Rows[fila].Cells[col].Value;
+                    object valorCelda = dgvVentas.Rows[fila].Cells[col].Value;
                     if (valorCelda == null || !float.TryParse(valorCelda.ToString(), out float resultado))
                     {
                         datosValidos = false;
@@ -67,6 +74,11 @@ namespace pryZarateBarMilanga
                 btnMozoDelDia.Enabled = true;
                 btnTotales.Enabled = true;
             }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
