@@ -48,12 +48,13 @@
             // 
             dgvVentas.AllowUserToAddRows = false;
             dgvVentas.BackgroundColor = Color.LightSlateGray;
+            dgvVentas.BorderStyle = BorderStyle.None;
             dgvVentas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvVentas.Columns.AddRange(new DataGridViewColumn[] { colMozos, colComidas, colBebidasSinAlcohol, colBebidasConAlcohol, colPostres });
-            dgvVentas.Location = new Point(33, 49);
+            dgvVentas.Location = new Point(33, 42);
             dgvVentas.Name = "dgvVentas";
             dgvVentas.RowHeadersVisible = false;
-            dgvVentas.Size = new Size(511, 180);
+            dgvVentas.Size = new Size(518, 204);
             dgvVentas.TabIndex = 0;
             // 
             // colMozos
@@ -85,6 +86,7 @@
             // 
             btnValidarDatos.Anchor = AnchorStyles.None;
             btnValidarDatos.BackColor = Color.SkyBlue;
+            btnValidarDatos.FlatStyle = FlatStyle.Popup;
             btnValidarDatos.Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnValidarDatos.Location = new Point(441, 252);
             btnValidarDatos.Name = "btnValidarDatos";
@@ -105,6 +107,7 @@
             btnMozoDelDia.TabIndex = 2;
             btnMozoDelDia.Text = "Mozo del día";
             btnMozoDelDia.UseVisualStyleBackColor = false;
+            btnMozoDelDia.Click += btnMozoDelDia_Click;
             // 
             // btnTotales
             // 

@@ -18,9 +18,8 @@ namespace pryZarateBarMilanga
             btnMozoDelDia.Enabled = false;
             btnTotales.Enabled = false;
             dgvVentas.Columns[0].ReadOnly = true;
-            dgvVentas.Columns[0].DefaultCellStyle.BackColor = Color.LightGray;
-            dgvVentas.AllowUserToAddRows = false;
-
+            dgvVentas.AllowUserToResizeColumns = false;
+            dgvVentas.AllowUserToResizeRows = false;
         }
 
         float[,] matVentas = new float[5, 4];
@@ -31,7 +30,6 @@ namespace pryZarateBarMilanga
             dgvVentas.Rows.Add("Javier");
             dgvVentas.Rows.Add("Gonzalo");
             dgvVentas.Rows.Add("Alberto");
-
             dgvVentas.Rows[0].Cells[0].Style.BackColor = Color.AliceBlue;
             dgvVentas.Rows[1].Cells[0].Style.BackColor = Color.AliceBlue;
             dgvVentas.Rows[2].Cells[0].Style.BackColor = Color.AliceBlue;
@@ -59,7 +57,6 @@ namespace pryZarateBarMilanga
                     }
                 }
             }
-
             if (!datosValidos)
             {
                 MessageBox.Show("Rellene TODOS los campos solo con números. Revise los campos.",
@@ -75,10 +72,29 @@ namespace pryZarateBarMilanga
                 btnTotales.Enabled = true;
             }
         }
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void btnMozoDelDia_Click(object sender, EventArgs e)
+        {
+            float mayorVenta = -1;
+            int indiceMozo = -1;
+            string[] nombresMozos = { "Julio", "Esteban", "Javier", "Gonzalo", "Alberto" };
+            for (int fila = 0; fila < matVentas.GetLength(0); fila++)
+            {
+                float totalMozo = 0;
+                for (int col = 0; col < matVentas.GetLength(1); col++)
+                {
+                    totalMozo += matVentas[fila, col];
+                }
+                if (totalMozo > mayorVenta)
+                {
+                    mayorVenta = totalMozo;
+                    indiceMozo = fila;
+                }
+            }
+            lblMozoDelDia.Text = $"Mozo del día: {nombresMozos[indiceMozo]} con ventas de ${mayorVenta}";
         }
     }
 }
