@@ -55,7 +55,7 @@
             dgvVentas.Name = "dgvVentas";
             dgvVentas.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dgvVentas.RowHeadersVisible = false;
-            dgvVentas.Size = new Size(518, 204);
+            dgvVentas.Size = new Size(502, 204);
             dgvVentas.TabIndex = 0;
             // 
             // colMozos
@@ -87,9 +87,8 @@
             // 
             btnValidarDatos.Anchor = AnchorStyles.None;
             btnValidarDatos.BackColor = Color.SkyBlue;
-            btnValidarDatos.FlatStyle = FlatStyle.Popup;
             btnValidarDatos.Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnValidarDatos.Location = new Point(448, 252);
+            btnValidarDatos.Location = new Point(432, 252);
             btnValidarDatos.Name = "btnValidarDatos";
             btnValidarDatos.Size = new Size(103, 39);
             btnValidarDatos.TabIndex = 1;
@@ -127,11 +126,10 @@
             // 
             btnCerrar.Anchor = AnchorStyles.None;
             btnCerrar.BackColor = Color.SkyBlue;
-            btnCerrar.FlatStyle = FlatStyle.Flat;
             btnCerrar.Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnCerrar.Location = new Point(448, 455);
+            btnCerrar.Location = new Point(432, 472);
             btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new Size(103, 46);
+            btnCerrar.Size = new Size(103, 29);
             btnCerrar.TabIndex = 4;
             btnCerrar.Text = "Cerrar";
             btnCerrar.UseVisualStyleBackColor = false;
@@ -141,7 +139,7 @@
             // 
             lblMozoDelDia.AutoSize = true;
             lblMozoDelDia.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMozoDelDia.Location = new Point(143, 387);
+            lblMozoDelDia.Location = new Point(143, 338);
             lblMozoDelDia.Name = "lblMozoDelDia";
             lblMozoDelDia.Size = new Size(0, 21);
             lblMozoDelDia.TabIndex = 5;
@@ -150,7 +148,7 @@
             // 
             lblTotales.AutoSize = true;
             lblTotales.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTotales.Location = new Point(143, 362);
+            lblTotales.Location = new Point(143, 380);
             lblTotales.Name = "lblTotales";
             lblTotales.Size = new Size(0, 21);
             lblTotales.TabIndex = 6;

@@ -40,16 +40,23 @@ namespace pryZarateBarMilanga
         private void btnValidarDatos_Click(object sender, EventArgs e)
         {
             bool datosValidos = true;
-
+            foreach (DataGridViewRow fila in dgvVentas.Rows)
+            {
+                foreach (DataGridViewCell celda in fila.Cells)
+                {
+                    celda.Style.BackColor = Color.White;
+                }
+            }
             for (int fila = 0; fila < dgvVentas.Rows.Count; fila++)
             {
                 for (int col = 1; col < dgvVentas.Columns.Count; col++)
                 {
                     object valorCelda = dgvVentas.Rows[fila].Cells[col].Value;
+
                     if (valorCelda == null || !float.TryParse(valorCelda.ToString(), out float resultado))
                     {
                         datosValidos = false;
-                        break;
+                        dgvVentas.Rows[fila].Cells[col].Style.BackColor = Color.LightCoral; 
                     }
                     else
                     {
@@ -59,7 +66,7 @@ namespace pryZarateBarMilanga
             }
             if (!datosValidos)
             {
-                MessageBox.Show("Rellene TODOS los campos solo con números. Revise los campos.",
+                MessageBox.Show("Existen celdas con errores. Revise las marcadas en rojo.",
                                 "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 btnMozoDelDia.Enabled = false;
                 btnTotales.Enabled = false;
@@ -99,7 +106,7 @@ namespace pryZarateBarMilanga
 
         private void btnTotales_Click(object sender, EventArgs e)
         {
-            float[] totalesCategorias = new float[4]; // Comidas, Bebidas sin alcohol, Bebidas con alcohol, Postres
+            float[] totalesCategorias = new float[4]; 
             float totalGeneral = 0;
 
             for (int fila = 0; fila < matVentas.GetLength(0); fila++)
